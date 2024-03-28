@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body bgcolor="gold">
+    <form action="obsługa.php" method="get">
+        <fieldset>
+        <legend>Wpisz swoje dane osobowe:</legend>
+            Imię: <input type="text" name="imie">
+            Nazwisko: <input type="text" name="nazwisko">
+            <br><br>
+            Płeć:
+            <input type="radio" name="plec" checked="checked">uczeń
+            <input type="radio" name="plec">uczennica
+            <br><br>
+            Zainteresowania:
+            <input type="checkbox" name="piłka nożna">piłka nożna
+            <input type="checkbox" name="hokej" checked="checked">hokej
+            <input type="checkbox" name="krykiet">krykiet
+            <br><br>
+            Uwagi:
+            <textarea cols="30" rows="3">
+            </textarea>
+        </fieldset>
+        <input type="reset" value="WYCZYŚĆ">
+        <input type="submit" value="WYŚLIJ">
+    </form>
+</body>
+</html>

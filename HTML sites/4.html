@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wybrane pseudoklasy w CSS3</title>
+    <style type="text/css">
+        *{margin:0px; padding:0px;}
+        body {font: .813em/1.5 verdana, sans-serif; color:navy; text-align:center; padding:10px;}
+        /*
+        div {overflow:auto; margin:10px;}
+        div h1{width:50px; height:50px; background:gold; float:left; margin-right:10px;}
+        div p{width:50px; height:50px; background:silver; float:left; margin-right:10px;}
+        div span{width:50px; height:50px; background:brown; display:block; float:left; margin-right:10px;}
+        */
+        form {width:500px; background:#eee; margin:20px auto; padding:10px;}
+        form fieldset {padding:10px;}
+        form fieldset input {margin:10px;}
+        input:checked {outline: 6px double red;}
+
+        /*
+        div h1:first-child {background:navy;}          
+        div span:last-child {background:black;}       
+        div h1:only-child {border:4px solid #f00;} 
+        */   
+
+        /*
+        div span:first-of-type {background:black;}
+        div p:last-of-type {background:navy;}
+        div h1:only-of-type {background:red;}
+        */
+
+        /*
+        div h1:only-child {background:black;}
+        div span:only-of-type {background:navy;}
+        */
+
+        /*
+        div h1:nth-child(4) {background:black;}
+        div p:nth-child(2n) {background:navy;}
+        div span:nth-child(even) {background:red;}
+        */
+
+        /*
+        div h1:nth-child(even) {background:black;}
+        div p:nth-child(odd) {background:navy;}
+        div span:nth-last-child(even) {background:red;}
+        div span:nth-last-child(odd) {background:teal;}
+        */
+
+        /*
+        div h1:empty {background:black;}
+        div p:not(.test) {background:navy;}
+        */
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Wybrane pseudoklasy w CSS3</h1>
+        <form>
+            <fieldset>
+                <legend>
+                    Znajomość języków programowania:
+                </legend>
+                C++ <input type="checkbox" name="jp" value="c++" checked="checked" />
+                Java <input type="checkbox" name="jp" value="java" />
+                JavaScript <input type="checkbox" name="jp" value="javascript" />
+                PHP <input type="checkbox" name="jp" value="php" />
+                <br /><input type="reset" value="Wyczyść" />
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <legend>
+                    Preferowany OS:
+                </legend>
+                Windows <input type="radio" name="os" value="windows" />
+                Linux <input type="radio" name="os" value="linux" checked="checked" />
+                Mac OS <input type="radio" name="os" value="mac_os" />
+                Inny <input type="radio" name="os" value="inny" />
+                <br /><input type="reset" value="Wyczyść" />
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
