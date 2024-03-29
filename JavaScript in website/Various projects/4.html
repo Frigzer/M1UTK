@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><script>/* <![CDATA[ */ ringDataLayer = {"context":{"variant":{"accelerator":"ZG93bmxvYWQucG9jenRhLm9uZXQucGw6OnByb2Rfd2l0aF91c2VyX2RhdGFfZG93bmxvYWRlcl9pbl9hd3NfMg=="}}}; /* ]]> */</script><script>/* <![CDATA[ */ accConf = {"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
+    <title>
+        Praca z klasami CSS w JavaScript'cie
+    </title>
+    <style type="text/css">
+        body{
+            font-size: 2em;
+            text-align: center;
+        }
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+        .przekresl{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="green">Hiperłącze 1</a>
+    <br>
+    <a href="#" class="red">Hiperłącze 2</a>
+    <script>
+        var link1=document.querySelector('.green');
+        link1.className='red';
+
+        var a2=document.querySelector('.red');
+        a2.classList.add('green', 'przekresl');
+        console.log(a2);
+        //dodawanie klas do istniejącej listy klas za pomocą obiektu classList
+
+        
+    </script>
+</body>
+</html>

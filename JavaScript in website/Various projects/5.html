@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><script>/* <![CDATA[ */ ringDataLayer = {"context":{"variant":{"accelerator":"ZG93bmxvYWQucG9jenRhLm9uZXQucGw6OnByb2Rfd2l0aF91c2VyX2RhdGFfZG93bmxvYWRlcl9pbl9hd3NfMg=="}}}; /* ]]> */</script><script>/* <![CDATA[ */ accConf = {"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
+    <title>
+        Praca z klasami CSS w JavaScript'cie
+    </title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    <section id="wrapper">
+        <h1>
+            Standardowy fragment Lorem Ipsum, używany od xv w.
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, tenetur consequatur? Ab, maxime asperiores, natus sint sequi nostrum id excepturi aspernatur deleniti sunt dicta omnis eligendi, molestias aut voluptas dolorum?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quisquam autem officia quo quae consequatur molestiae, saepe sunt magnam necessitatibus vero ducimus, alias sit ea ex, unde quaerat enim consequuntur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit tempora iusto voluptates debitis atque possimus delectus vero porro a vitae inventore quaerat officiis neque, molestias veritatis ipsam dolor harum? Deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet dolor aut saepe ullam? Commodi ipsum laborum odio itaque possimus ut soluta quia eius, quasi id dolor distinctio vel? Officiis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, tenetur consequatur? Ab, maxime asperiores, natus sint sequi nostrum id excepturi aspernatur deleniti sunt dicta omnis eligendi, molestias aut voluptas dolorum?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quisquam autem officia quo quae consequatur molestiae, saepe sunt magnam necessitatibus vero ducimus, alias sit ea ex, unde quaerat enim consequuntur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit tempora iusto voluptates debitis atque possimus delectus vero porro a vitae inventore quaerat officiis neque, molestias veritatis ipsam dolor harum? Deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet dolor aut saepe ullam? Commodi ipsum laborum odio itaque possimus ut soluta quia eius, quasi id dolor distinctio vel? Officiis.
+        </p>
+    <a href="http://pl.lipsum.com/">Hiperłącze do Lorem Ipsum</a>
+    </section>  
+    <script>
+        var body=document.querySelector('body');
+        console.log(body.style);
+        body.style.backgroundColor='#cad0ff';
+        body.style['font-family']='verdana';
+
+        var section=document.querySelector('section#wrapper');
+        section.style['background-color']='gold';
+        section.style.padding='.5rem';
+
+        var h1=document.querySelector('h1');
+        h1.style.cssText='background:navy; color:#fff; padding:.3rem; text-align:center;';
+
+        var akapity=document.querySelectorAll('p');
+        for (var i=0; i<akapity.length; i++)
+        {
+            //akapity[i].style.cssText='font-family:tahoma; text-align:justify; text-indent:2rem; color:#00f;';
+            akapity[i].style.fontFamily='tahoma';
+            akapity[i].style.textAlign='justify';
+            akapity[i].style.textIndent='2rem';
+            akapity[i].style['color']="#00f";
+        }
+
+        var a=document.querySelector('a');
+        a.style.cssText='text-decoration:none; font-weight:bold;';
+        a.style.color='#f00';
+
+        a.style.textTransform='uppercase';
+
+
+        akapity[0].style.color='';
+        console.log('Czcionka w akapicie, to: '+akapity[0].style.fontFamily+'.');
+        document.write('Czcionka w akapicie, to: '+akapity[0].style.fontFamily+'.');
+        console.log('Akapit, to element typu: '+akapity[0].style.display+'.')
+        console.log('Akapit, to element typu: '+window.getComputedStyle(akapity[0]).display+'.')
+    </script>
+</body>
+</html>

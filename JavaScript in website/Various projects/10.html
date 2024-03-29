@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><script>/* <![CDATA[ */ ringDataLayer = {"context":{"variant":{"accelerator":"ZG93bmxvYWQucG9jenRhLm9uZXQucGw6OnByb2Rfd2l0aF91c2VyX2RhdGFfZG93bmxvYWRlcl9pbl9hd3NfMg=="}}}; /* ]]> */</script><script>/* <![CDATA[ */ accConf = {"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
+    <title>
+        Obsługa formularzy - przykład 1
+    </title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    <h1>PROSTE DZIAŁANIA</h1>
+    <form id="formularz" name="formularz">
+        Podaj pierwszą liczbę: <input type="text" id="l1" name="l1">
+        <br><br>
+        Podaj drugą liczbę: <input type="text" id="l2" name="l2">
+        <br><br>
+        <input type="button" id="dodawanie" value="DODAWANIE">
+        <input type="button" id="odejmowanie" value="ODEJMOWANIE">
+        <input type="button" id="mnozenie" value="MNOŻENIE">
+        <input type="button" id="dzielenie" value="DZIELENIE">
+    </form>
+    <div id="wynik"></div>
+    <script>
+        document.querySelector('#dodawanie').onclick=function()
+        {
+            var l1=document.querySelector('#l1').value;   
+            var l2=document.querySelector('#l2').value;
+            if(isNaN(l1) || isNaN(l2) || l1.length==0 || l2.length==0)
+            {
+                document.querySelector('#wynik').innerHTML='Zły argument !!!';
+            }
+            else
+            {
+                l1=parseFloat(l1);
+                l2=parseFloat(l2);
+                var suma=l1+l2;
+                document.querySelector('#wynik').innerHTML='Suma l1 i l2 wynosi: '+suma+'.';
+            }
+        }
+
+        document.querySelector('#odejmowanie').onclick=function()
+        {
+            var l1=document.querySelector('#l1').value;   
+            var l2=document.querySelector('#l2').value;
+            if(isNaN(l1) || isNaN(l2) || l1.length==0 || l2.length==0)
+            {
+                document.querySelector('#wynik').innerHTML='Zły argument !!!';
+            }
+            else
+            {
+                l1=parseFloat(l1);
+                l2=parseFloat(l2);
+                var roznica=l1-l2;
+                document.querySelector('#wynik').innerHTML='Różnica l1 i l2 wynosi: '+roznica+'.';
+            }
+        }
+
+        document.querySelector('#mnozenie').onclick=function()
+        {
+            var l1=document.querySelector('#l1').value;   
+            var l2=document.querySelector('#l2').value;
+            if(isNaN(l1) || isNaN(l2) || l1.length==0 || l2.length==0)
+            {
+                document.querySelector('#wynik').innerHTML='Zły argument !!!';
+            }
+            else
+            {
+                l1=parseFloat(l1);
+                l2=parseFloat(l2);
+                var iloczyn=l1*l2;
+                document.querySelector('#wynik').innerHTML='Iloczyn l1 i l2 wynosi: '+iloczyn+'.';
+            }
+        }
+
+        document.querySelector('#dzielenie').onclick=function()
+        {
+            var l1=document.querySelector('#l1').value;   
+            var l2=document.querySelector('#l2').value;
+            if(isNaN(l1) || isNaN(l2) || l1.length==0 || l2.length==0)
+            {
+                document.querySelector('#wynik').innerHTML='Zły argument !!!';
+            }
+            else
+            {
+                if(l2==0)
+                {
+                    document.querySelector('#wynik').innerHTML='Nie można dzielić przez 0 !!!';
+                }
+                else
+                {
+                    l1=parseFloat(l1);
+                    l2=parseFloat(l2);
+                    var iloraz=l1/l2;
+                    document.querySelector('#wynik').innerHTML='Iloraz l1 i l2 wynosi: '+iloraz+'.';
+                } 
+            }
+        }
+    </script>
+</body>
+</html>

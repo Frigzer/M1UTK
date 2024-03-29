@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><script>/* <![CDATA[ */ ringDataLayer = {"context":{"variant":{"accelerator":"ZG93bmxvYWQucG9jenRhLm9uZXQucGw6OnByb2Rfd2l0aF91c2VyX2RhdGFfZG93bmxvYWRlcl9pbl9hd3NfMg=="}}}; /* ]]> */</script><script>/* <![CDATA[ */ accConf = {"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
+    <title>
+        Praca z atrybutami w JavaScript'cie
+    </title>
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+        .link{
+            color:brown;
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.wp.pl" class="link">WIRTUALNA POLSKA</a>
+    <br><br>
+    <form>
+        <input type="button" value="KLIKNIJ MNIE !!!">
+    </form>
+    <br>
+    <script>
+        var link=document.querySelector('.link');
+        var href=link.getAttribute('href');
+        var hiper=link.getAttribute('class');
+
+        link.removeAttribute('class');
+        var btn=document.querySelector('input').setAttribute('disabled',true);
+
+        var img=document.createElement('img');
+        img.src="3.jpg";
+        img.setAttribute('alt', 'WP');
+        var body=document.createElement('body');
+        document.body.appendChild(img);
+    </script>
+</body>
+</html>

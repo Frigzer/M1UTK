@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><script>/* <![CDATA[ */ ringDataLayer = {"context":{"variant":{"accelerator":"ZG93bmxvYWQucG9jenRhLm9uZXQucGw6OnByb2Rfd2l0aF91c2VyX2RhdGFfZG93bmxvYWRlcl9pbl9hd3NfMg=="}}}; /* ]]> */</script><script>/* <![CDATA[ */ accConf = {"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
+    <title>
+        Wstawianie elementów dynamicznie
+    </title>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <ul id="lista">
+        <li>Pierwszy element listy</li>
+        <li class="drugi">Drugi element listy</li>
+        <li>Trzeci element listy</li>
+    </ul>
+    <script>
+        var zawartosc5=document.createTextNode('Piąty element listy');
+        var element=document.createElement('li');
+        element.appendChild(zawartosc5);
+        var lista=document.querySelector('ul#lista');
+        lista.appendChild(element);
+        //wstawianie elementu na końcu listy
+
+        var zawartosc4=document.createTextNode('Czwarty element listy');
+        var element4=document.createElement('li');
+        element4.appendChild(zawartosc4);
+        lista.insertBefore(element4, lista.querySelector('li:nth-child(4)'));
+        //wstawianie elementu przed elementem listy
+
+        lista.appendChild(lista.querySelector('li:first-child'));
+        //wycinanie elementu i wstawianie go na końcu listy
+
+        lista.removeChild(lista.querySelector('li:nth-child(1)'));
+        //usuwanie elementu listy
+
+        var zawartosc33=document.createTextNode('Trzydziesty trzeci element listy');
+        var element33=document.createElement('li');
+        element33.appendChild(zawartosc33);
+        lista.replaceChild(element33,
+        lista.querySelector('li:nth-child(1)'));
+        //zastąpienie elementu listy innym
+        
+    </script>
+</body>
+</html>

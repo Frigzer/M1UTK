@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><script>/* <![CDATA[ */ ringDataLayer = {"context":{"variant":{"accelerator":"ZG93bmxvYWQucG9jenRhLm9uZXQucGw6OnByb2Rfd2l0aF91c2VyX2RhdGFfZG93bmxvYWRlcl9pbl9hd3NfMg=="}}}; /* ]]> */</script><script>/* <![CDATA[ */ accConf = {"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
+    <title>
+        Przypisanie zdarzeń do elementów HTML
+    </title>
+    <style type="text/css">
+        *{margin: 0px; padding: 0px;}
+        section#wrapper{width: 250px; margin: 20px auto; }
+        section#wrapper a{display: block; text-decoration:none; padding:5px 20px; background:navy; color:#fff; font-family:arial; text-align:center; margin-bottom:4px;}
+        
+    </style>
+</head>
+<body>
+    <section id="wrapper">
+        <a href="http://www.wp.pl">WIRTUALNA POLSKA</a>
+        <a href="http://www.onet.pl">ONET</a>
+        <a href="http://www.interia.pl">INTERIA</a>
+    </section>  
+    <script>
+        var t_link=document.getElementsByTagName('a');
+        regula1="background:gold; color:navy;";
+        regula2="background:#800000; color:gold;";
+
+        /*
+        t_link[0].onmouseover=function(){t_link[0].style.cssText=regula}
+        t_link[1].onmouseover=function(){t_link[1].style.cssText=regula}
+        t_link[2].onmouseover=function(){t_link[2].style.cssText=regula}
+        */
+
+        for (var i=0; i<t_link.length; i++)
+        {
+            t_link[i].onmouseover=function(){this.style.cssText=regula1}
+            t_link[i].onmouseout=function(){this.style.cssText=regula2}
+        }
+    </script>
+</body>
+</html>
