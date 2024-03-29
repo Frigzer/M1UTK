@@ -1,0 +1,41 @@
+header {
+    background-color: #993333; 
+    color: white; 
+    text-align: center; 
+    height: 80px;}
+.jeden, .dwa, .trzy, .cztery {
+    font-style: tahoma; 
+    background-color: #CC6666; 
+    color: white; 
+    text-align: center; 
+    width: 25%; 
+    height: 150px;
+    float: left;}
+main nav, aside {
+    background-color: #CC9999; 
+    width: 40%; 
+    height: 550px; 
+    text-align: center; 
+    float: left;}
+article {
+    background-color: #FFCCCC; 
+    width: 20%; 
+    height: 550px; 
+    float: left;}
+footer {
+    background-color: #993333; 
+    color: white; 
+    text-align: right;}
+table  {
+    border: 1px red dotted; 
+    width: 100%; }
+td {
+    text-align: center;}
+input[type=button] {
+    border: 0px; 
+    padding: 20px;
+    background-color: red; 
+    color: white;}
+.cztery img {
+    width: 80px; 
+    height: 80px;}
