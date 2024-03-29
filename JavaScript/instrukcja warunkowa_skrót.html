@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Instrukcja warunkowa</title>
+</head>
+<body>
+    <script>
+        var liczba1=prompt("Wpisz pierwszą liczbę");
+        liczba1=parseFloat(liczba1);
+        var liczba2=prompt("Wpisz drugą liczbę");
+        liczba2=parseFloat(liczba2);
+        var suma=(liczba1+liczba2);
+        document.write("Liczba 1= "+liczba1+", liczba 2= "+liczba2+", suma= "+suma+".<br>");
+        /*
+        if(suma%2==0)
+        {
+            document.write('Suma liczb jest parzysta');
+        }
+        else
+        {
+            document.write('Suma liczb jest nieparzysta');
+        }
+        */
+       document.write((suma%2==0)?'Suma liczb jest parzysta':'Suma liczb jest nieparzysta');
+    </script>
+</body>
+</html>
