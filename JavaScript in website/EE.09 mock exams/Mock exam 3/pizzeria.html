@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizzeria Margherita</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <section id="baner">
+        <h2>Najlepsza pizza w mieście <img src="logo.png"></h2>
+    </section>
+    <section id="lewy">
+        <p>U nas zamówisz pizzę z dowozem</p>
+        <a href="logo.png">Nasze logo</a>
+    </section>
+    <section id="srodkowy">
+        <h3>Pizzeria Margherita</h3>
+        <p>ul. Botaniczna 4, Zielona Góra</p>
+    </section>
+    <section id="prawy">
+        <h3>Oferta</h3>
+        <ol>
+            <li>Pizza</li>
+            <li>Lasagne</li>
+            <li>Sałatki</li>
+        </ol>
+        <p><a href="Oferta.txt">Pobierz pełną ofertę</a></p>
+    </section>
+    <section id="dolny">
+        <h3>Oblicz koszt dostawy</h3>
+        <input type="checkbox" id="check"> Jestem z Zielonej Góry<br>
+        <p>albo</p><br>
+        Podaj liczbę kilometrów od Zielonej Góry <input type="numer" id="odleglosc"><br>
+        <input type="button" value="Oblicz" id="oblicz"><br>
+        <p id="wynik"></p>
+        <script>
+            document.querySelector('#oblicz').onclick=function()
+            {
+                var odleglosc=document.querySelector('#odleglosc').value;
+                var check=document.querySelector('#check').checked;
+                var koszt=2*odleglosc;
+                if(check)
+                {
+                    document.querySelector('#wynik').innerHTML='Dowieziemy Twoją pizzę za darmo';
+                }
+                else
+                {
+                    document.querySelector('#wynik').innerHTML='Dowóz będzie Cię kosztował '+koszt+' złotych';
+                }
+            }
+        </script>
+    </section>
+    <section id="stopka">
+        Stronę internetową opracował: <b>PESEL</b>
+    </section>
+</body>
+</html>
