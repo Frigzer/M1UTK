@@ -23,9 +23,9 @@
                 <h3>Formularz kontaktowy</h3>
                 <table>
                     <form>
-                        <tr><td>Imię:</td><td><input type="text" name="imie"></td></tr>
-                        <tr><td>Nazwisko:</td><td><input type="text" name="nazwisko"></td></tr>
-                        <tr><td>E-mail:</td><td><input type="text" name="mail"></td></tr>
+                        <tr><td>Imię:</td><td><input type="text" name="imie" id="imie"></td></tr>
+                        <tr><td>Nazwisko:</td><td><input type="text" name="nazwisko" id="nazwisko"></td></tr>
+                        <tr><td>E-mail:</td><td><input type="text" name="mail" id="mail"></td></tr>
                         <tr><td>Usługa:</td><td><label for="usluga"></label>
                         <select name="usluga" id="usluga">
                             <option value="naprawa_komputera">naprawa komputera</option>
@@ -35,9 +35,31 @@
                             <option value="inne">inne</option>
                         </select></td></tr>
                         <tr><td></td><td><input type="checkbox" checked="checked">Wyślij kopię wiadomości</td></tr>
-                        <tr><td><input type="reset" value="Resetuj"></td><td><input type="submit" value="Prześlij"></td></tr>
+                        <tr><td><input type="reset" value="Resetuj" id="reset"></td><td><input type="button" value="Prześlij" id="send"></td></tr>
                     </form>
                 </table>
+            </td><td><div id="wynik"></div>
+                <script>
+                    document.querySelector('#send').onclick=function()
+                    {
+                        var imie=document.querySelector('#imie').value;
+                        var nazwisko=document.querySelector('#nazwisko').value;
+                        var mail=document.querySelector('#mail').value;
+                        var usluga=document.querySelector('#usluga').value;
+                        if(imie.length==0 || nazwisko.length==0 || mail.length==0)
+                        {
+                            document.querySelector('#wynik').innerHTML=imie+'Uzupełnij wszystkie pola!!!';
+                        }
+                        else
+                        {
+                            document.querySelector('#wynik').innerHTML=imie+' '+nazwisko+'<br>'+mail+'<br>'+'Usługa: '+usluga;
+                        }
+                    }
+                    document.querySelector('#reset').onclick=function()
+                    {
+                        document.querySelector('#wynik').innerHTML='';
+                    }
+                </script>
             </section>
             <section id="trzeci">
                 

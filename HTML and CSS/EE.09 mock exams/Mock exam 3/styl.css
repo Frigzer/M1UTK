@@ -2,7 +2,7 @@ body{
     background-color: #99FFCC;
 }
 #kontener{
-    width: 100px;
+    width: 1000px;
     margin: auto;
 }
 #baner{
@@ -16,6 +16,9 @@ body{
     padding-bottom: 20px;
 }
 #glowny{
+    display: flex;
+}
+#pierwszy, #drugi, #trzeci{
     width: 310px;
     padding: 10px;
 }
@@ -25,4 +28,19 @@ body{
     text-align: right;
     height: 30px;
     padding: 20px;
+}
+#menu a{
+    color: #006666;
+    margin: 50px;
+    text-decoration: none;
+    font-size: 200%;
+}
+h2, h3{
+    text-align: center;
+}
+#reset{
+    background-color: #FF0000;
+}
+#send{
+    background-color: #00FF00 ;
 }
