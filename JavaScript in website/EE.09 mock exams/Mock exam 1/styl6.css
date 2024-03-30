@@ -1,0 +1,46 @@
+#baner{
+    background-color:#993333;
+    color: white;
+    text-align: center;
+    height: 80px;
+}
+#pierwszy, #drugi, #trzeci, #czwarty{
+    font-family:Tahoma;
+    background-color: #CC6666;
+    color: white;
+    text-align: center;
+    width: 25%;
+    height:150px ;
+}
+#panele_informacyjne, #panele{
+    display: flex;
+}
+#lewy, #prawy{
+    background-color: #CC9999;
+    width: 40%;
+    height: 550px;
+    text-align: center;
+}
+#srodkowy{
+    background-color: #FFCCCC;
+    width: 20%;
+    height: 550px;
+}
+#stopka{
+    background-color: #993333;
+    color: white;
+    text-align: right;
+}
+table{
+    border: 1px dotted red;
+    width: 100%;
+}
+td{
+    text-align: center;
+}
+input[type='button']{
+    border: 0px;
+    padding: 20px;
+    background-color: red;
+    color: white;
+}

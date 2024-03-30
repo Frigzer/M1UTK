@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        DZIAŁANIA MATEMATYCZNE
+    </title>
+    <style type="text/css">
+        body{
+            width: 800px;
+            margin: auto;
+        }
+        nav{
+            width: 30%;
+            float: left;
+        }
+        article{
+            width: 70%;
+            float: left;
+            text-align: center;
+        }
+        li{
+            list-style-type: none;
+        }
+        input{
+            margin: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="baner.jpg" alt="baner">
+    </header>
+    <main>
+        <nav>
+            <p>Menu</p>
+            <ul>
+                <li><a href="strona1.html">- proste działania</a></li>
+                <li><a href="strona2.php">- potęgowanie</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h1>PROSTE DZIAŁANIA</h1>
+            <form>
+                <i>Podaj pierwszą liczbę</i><input type="text" id="l1" name="l1"><br>
+                <i>Podaj drugą liczbę</i><input type="text" id="l2" name="l2"><br>
+                <input type="button" value="DODAWANIE" onclick="obliczenia('dodawanie')">
+                <input type="button" value="ODEJMOWANIE" onclick="obliczenia('odejmowanie')">
+                <input type="button" value="MNOŻENIE" onclick="obliczenia('mnozenie')">
+                <input type="button" value="DZIELENIE" onclick="obliczenia('dzielenie')">
+            </form>
+            <div id="result"></div>
+            <script>
+                function obliczenia(dzialanie)
+                {
+                    var l1=document.querySelector('#l1').value;
+                    var l2=document.querySelector('#l2').value;
+                    var result=document.querySelector('#result');
+                    var tekst="<i>Wynik działania wynosi: </i>";
+                    if(l1 && l2)
+                    {
+                        switch (dzialanie)
+                        {
+                            case 'dodawanie':
+                            result.innerHTML=tekst+(l1*1+l2*1);
+                            break;
+                            case 'odejmowanie':
+                            result.innerHTML=tekst+(l1*1-l2*1);
+                            break;
+                            case 'mnozenie':
+                            result.innerHTML=tekst+(l1*1*l2*1);
+                            break;
+                            case 'dzielenie':
+                            result.innerHTML=(l2!=0)?tekst+(l1/l2):'<i>Nie wolno dzielić przez zero</i>';
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        result.innerHTML='<i>Proszę uzupełnić obie liczby</i>';
+                    }
+                }
+            </script>
+        </article>
+    </main>
+</body>
+</html>
