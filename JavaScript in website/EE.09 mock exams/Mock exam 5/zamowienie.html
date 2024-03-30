@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fabryka cukierków</title>
+    <link rel="stylesheet" href="styl10.css">
+</head>
+<body>
+    <section id="gorny_1">
+        <a href="zamowienie.html">Zamów cukierki</a>
+    </section>
+    <section id="gorny_2">
+        <a href="index.html"><img src="logotyp.png" alt="Nasze logo"></a>
+    </section>
+    <section id="baner">
+        <h1>Strefa zamówień</h1>
+    </section>
+    <section id="lewy">
+        Numer kształtu:<br>
+        <input type="number" id="numer"><br>
+        skomponuj swój kolor, podaj RGB<br>
+        R <input type="number" id="r"> G <input type="number" id="g"> B <input type="number" id="b"><br>
+        <input type="button" value="Zamówienie" id="send"><br>
+        <p id="result">Twoje zamowienie</p><br>
+        <input type="button" value="Kolor" id="kolor">
+        <script>
+            document.querySelector("#send").onclick=function()
+            {
+                var numer=document.querySelector("#numer").value;
+                var r=document.querySelector("#r").value;
+                var g=document.querySelector("#g").value;
+                var b=document.querySelector("#b").value;
+                if(numer==1) var rodzaj="cytryna";
+                else if(numer==2) var rodzaj="liść";
+                else if(numer==3) var rodzaj="banan";
+                else var rodzaj="inny";
+                document.querySelector("#result").innerHTML="Twoje zamówienie to cukierek "+rodzaj;
+                document.querySelector("#kolor").style.backgroundColor='rgb('+r+', '+g+', '+b+')';
+            }
+        </script>
+    </section>
+    <section id="prawy">
+        <h2>Nasza oferta</h2>
+        <table>
+            <tr>
+                <td>Kształty</td><td rowspan="2">Możesz zamówić dowolny kolor cukierka</td>
+            </tr>
+            <tr>
+                <td>
+                    <ol>
+                        <li>cytryna</li>
+                        <li>liść</li>
+                        <li>banan</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="stopka">
+        Autor strony: <b>PESEL</b>
+    </section>
+</body>
+</html>
