@@ -1,0 +1,43 @@
+a{
+    color:  #ffd87e;
+}
+#baner, #stopka, #lewy{
+    background-color:  #af8c4b;
+}
+#prawy{
+    background-color:  #ffd87e;
+    width: 70%;
+    overflow: auto;
+}
+#baner, #stopka{
+    text-align: center;
+}
+#lewy{
+    width: 30%;
+    text-align: right;
+}
+*{
+    font-family: Tahoma;
+}
+#prawy, #lewy{
+    height: 500px;
+    float: left;
+}
+#baner{
+    height: 60px;
+}
+#stopka{
+    height: 25px;
+    clear: both;
+}
+hr{
+    border-color:  #ffd87e;
+}
+li{
+    list-style: circle;
+    list-style-position: inside
+}
+td{
+    border: black dotted 1px;
+}
+
